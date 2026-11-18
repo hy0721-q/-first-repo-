@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="hy0721-q 的个人主页：一个从 VSCode、Git 到 GitHub 起步的学习小站。">
+<title>hy0721-q · 个人主页</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%232f6b4f'/%3E%3Ctext x='32' y='42' font-size='30' text-anchor='middle' fill='%23faf7f2' font-family='sans-serif' font-weight='700'%3Eh%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap">
+<style>
+  :root{
+    --paper:#faf7f2;
+    --card:#ffffff;
+    --ink:#262320;
+    --muted:#6f675e;
+    --line:#e7e0d5;
+    --green:#2f6b4f;
+    --green-dark:#245139;
+    --amber:#c98a3d;
+    --radius:16px;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+    font-weight:400;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit}
+  .wrap{max-width:1024px;margin:0 auto;padding:0 28px}
+  section{padding:64px 0}
+  h2{font-size:26px;font-weight:700;margin:0 0 8px;letter-spacing:.02em}
+  .lead{color:var(--muted);margin:0 0 36px;max-width:52ch}
+
+  /* ===== 顶部导航 ===== */
+  .nav{position:sticky;top:0;z-index:10;background:var(--paper);border-bottom:1px solid var(--line)}
+  .nav-inner{max-width:1024px;margin:0 auto;padding:16px 28px;display:flex;align-items:center;justify-content:space-between}
+  .brand{font-weight:700;font-size:17px;letter-spacing:.03em;text-decoration:none}
+  .brand span{color:var(--green)}
+  .nav-links{display:flex;gap:26px;align-items:center}
+  .nav-links a{color:var(--muted);text-decoration:none;font-size:15px}
+  .nav-links a:hover,.nav-links a:focus{color:var(--green)}
+  .nav-links .btn{color:#fff}
+  .btn{display:inline-block;background:var(--green);color:#fff;text-decoration:none;padding:9px 20px;border-radius:99px;font-size:15px;font-weight:500;transition:background .15s}
+  .btn:hover,.btn:focus{background:var(--green-dark)}
+
+  /* ===== Hero ===== */
+  .hero{padding:76px 0 60px}
+  .hero-top{display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap}
+  .hero h1{font-size:52px;font-weight:700;line-height:1.25;margin:18px 0 20px;letter-spacing:.02em}
+  .hero p{color:var(--muted);max-width:44ch;margin:0 0 30px;font-size:17px}
+  .kicker{display:inline-block;background:var(--green);color:#fff;font-size:13px;padding:5px 14px;border-radius:99px;letter-spacing:.04em}
+  .mark{width:200px;height:200px;flex-shrink:0;border-radius:50%;background:var(--green);color:var(--paper);display:flex;align-items:center;justify-content:center;font-size:110px;font-weight:700;line-height:1;user-select:none}
+  .stats{display:flex;gap:40px;flex-wrap:wrap;margin-top:56px;padding-top:32px;border-top:1px solid var(--line)}
+  .stat .num{font-size:32px;font-weight:700;color:var(--green);line-height:1.1}
+  .stat .lab{color:var(--muted);font-size:14px;margin-top:4px}
+
+  /* ===== 学习路线 ===== */
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px 24px}
+  .card .step{font-size:13px;color:var(--amber);font-weight:500;letter-spacing:.05em}
+  .card h3{font-size:19px;font-weight:500;margin:12px 0 10px}
+  .card p{color:var(--muted);font-size:15px;margin:0}
+
+  /* ===== 关于 ===== */
+  .about{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+  .about p{color:var(--muted);margin:0 0 16px}
+  .tags{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+  .tags li{background:var(--card);border:1px solid var(--line);border-radius:99px;padding:7px 18px;font-size:14px;color:var(--green-dark)}
+
+  /* ===== 页脚 ===== */
+  footer{border-top:1px solid var(--line);padding:36px 0;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+  footer p{margin:0;color:var(--muted);font-size:14px}
+
+  @media (max-width:760px){
+    .hero h1{font-size:36px}
+    .mark{width:130px;height:130px;font-size:74px;margin-top:8px}
+    .grid3{grid-template-columns:1fr}
+    .about{grid-template-columns:1fr;gap:28px}
+    .nav-links{gap:18px}
+    .nav-links a:not(.btn){display:none}
+    section{padding:48px 0}
+    .hero{padding:52px 0 44px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none !important}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== 顶部导航 ===== -->
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top">hy0721<span>-q</span></a>
+    <nav class="nav-links" aria-label="主导航">
+      <a href="#path">学习路线</a>
+      <a href="#about">关于我</a>
+      <a class="btn" href="https://github.com/hy0721-q" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-top">
+        <div>
+          <span class="kicker">正在学习前端与开发工具</span>
+          <h1>你好，我是 hy0721-q。</h1>
+          <p>这是我的第一个网页，也是这个账号的起点：从一个练习文件开始，把每次学到的东西，一点点放上 GitHub。</p>
+          <a class="btn" href="https://github.com/hy0721-q" target="_blank" rel="noopener">来我的 GitHub 看看</a>
+        </div>
+        <div class="mark" aria-hidden="true">h</div>
+      </div>
+      <div class="stats">
+        <div class="stat"><div class="num">01</div><div class="lab">个人主页</div></div>
+        <div class="stat"><div class="num">02</div><div class="lab">练习文件</div></div>
+        <div class="stat"><div class="num">03</div><div class="lab">开发工具已就位</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 学习路线 ===== -->
+  <section id="path">
+    <div class="wrap">
+      <h2>这段时间搭起来的开发环境</h2>
+      <p class="lead">从完全没接触过，到能独立提交并推送代码，按顺序走通了这几步。</p>
+      <div class="grid3">
+        <div class="card">
+          <div class="step">第 1 步</div>
+          <h3>VSCode 编辑器</h3>
+          <p>装好编辑器与中文语言包，用它新建、编辑并保存项目文件，熟悉基本界面。</p>
+        </div>
+        <div class="card">
+          <div class="step">第 2 步</div>
+          <h3>Git 版本管理</h3>
+          <p>配置用户名与邮箱，学会初始化仓库、暂存改动和提交，给每次修改留下记录。</p>
+        </div>
+        <div class="card">
+          <div class="step">第 3 步</div>
+          <h3>GitHub 远程仓库</h3>
+          <p>完成账号授权，把本地代码推送到远程仓库，让成果在云端也能看到。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 关于 ===== -->
+  <section id="about">
+    <div class="wrap">
+      <h2>关于这个主页</h2>
+      <p class="lead">先做一个简单、干净的起点，以后再慢慢往里加内容。</p>
+      <div class="about">
+        <div>
+          <p>这个页面用单个 HTML 文件写成，包含内联样式，不依赖任何构建工具，双击就能在浏览器里打开。</p>
+          <p>接下来打算继续练习页面布局与样式，再逐步加入自己的项目展示和学习笔记。</p>
+        </div>
+        <ul class="tags">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Git</li>
+          <li>GitHub</li>
+          <li>VSCode</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== 页脚 ===== -->
+<footer class="wrap">
+  <p>© 2026 hy0721-q · 用 VSCode 与 Git 完成</p>
+  <a class="btn" href="https://github.com/hy0721-q/-first-repo-" target="_blank" rel="noopener">查看本页源码</a>
+</footer>
+
+</body>
+</html>
